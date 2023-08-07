@@ -1,0 +1,17 @@
+{
+  "name": "@niftgen/fragments.notification",
+  "type": "module",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@niftgen/compileFragments": "workspace:*",
+    "@niftgen/fragments.asset": "workspace:*",
+    "@niftgen/fragments.comment": "workspace:*",
+    "@niftgen/fragments.rating": "workspace:*",
+    "@niftgen/fragments.transaction": "workspace:*",
+    "@niftgen/fragments.user": "workspace:*"
+  }
+}

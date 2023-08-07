@@ -1,0 +1,13 @@
+fragment user on User {
+  id
+  walletAddress
+  avatarPath
+  userName
+  metadata
+  messageReceivedTotals {
+    nftMessageTotal
+    nftMessageRead
+    privateMessageTotal
+    privateMessageRead
+  }
+}

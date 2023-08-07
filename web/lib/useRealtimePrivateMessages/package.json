@@ -1,0 +1,16 @@
+{
+  "name": "@niftgen/useRealtimePrivateMessages",
+  "type": "module",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@niftgen/compileFragments": "workspace:*",
+    "@niftgen/fragments.notification": "workspace:*",
+    "@niftgen/useGraphqlSubscription": "workspace:*",
+    "@niftgen/useUserPrivateMessages": "workspace:*",
+    "react": "^18.2.0"
+  }
+}

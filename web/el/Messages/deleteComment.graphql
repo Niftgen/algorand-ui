@@ -1,0 +1,3 @@
+mutation deleteComment($walletAddress: String!, $id: Int!) {
+  deleteComment(walletAddress: $walletAddress, id: $id)
+}

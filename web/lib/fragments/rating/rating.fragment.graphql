@@ -1,0 +1,6 @@
+fragment rating on Rating {
+  id
+  userId
+  assetId
+  rating
+}

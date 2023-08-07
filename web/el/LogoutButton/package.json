@@ -1,0 +1,14 @@
+{
+  "name": "@niftgen/LogoutButton",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@mui/material": "^5.11.7",
+    "@niftgen/useAuth": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

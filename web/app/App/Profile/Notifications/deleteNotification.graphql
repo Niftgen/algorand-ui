@@ -1,0 +1,3 @@
+mutation deleteNotification($walletAddress: String!, $id: Int!) {
+  deleteNotification(walletAddress: $walletAddress, id: $id)
+}

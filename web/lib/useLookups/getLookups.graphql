@@ -1,0 +1,8 @@
+query getLookups {
+  getLookups {
+    id
+    active
+    description
+    type
+  }
+}

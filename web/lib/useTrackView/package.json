@@ -1,0 +1,18 @@
+{
+  "name": "@niftgen/useTrackView",
+  "type": "module",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@niftgen/compileFragments": "workspace:*",
+    "@niftgen/fragments.asset": "workspace:*",
+    "@niftgen/useAuth": "workspace:*",
+    "@niftgen/useFetch": "workspace:*",
+    "@niftgen/useNfts": "workspace:*",
+    "@tanstack/react-query": "^4.24.4",
+    "react": "^18.2.0"
+  }
+}

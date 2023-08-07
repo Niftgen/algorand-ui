@@ -1,0 +1,11 @@
+{
+  "name": "@niftgen/SocialMediaLogo",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}

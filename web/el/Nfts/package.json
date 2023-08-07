@@ -1,0 +1,23 @@
+{
+  "name": "@niftgen/Nfts",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.7",
+    "@niftgen/Price": "workspace:*",
+    "@niftgen/UserLink": "workspace:*",
+    "@niftgen/currency": "workspace:*",
+    "@niftgen/renderDate": "workspace:*",
+    "@niftgen/useIpfs": "workspace:*",
+    "@niftgen/useLookups": "workspace:*",
+    "@niftgen/useNfts": "workspace:*",
+    "@nkbt/react-router": "^1.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

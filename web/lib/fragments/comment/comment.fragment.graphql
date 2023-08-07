@@ -1,0 +1,14 @@
+fragment comment on Comment {
+  id
+  content
+  asset {
+    id
+  }
+  addressee {
+    ...user
+  }
+  owner {
+    ...user
+  }
+  createdAt
+}

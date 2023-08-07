@@ -1,0 +1,14 @@
+{
+  "name": "@niftgen/useLookups",
+  "type": "module",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@niftgen/useFetch": "workspace:*",
+    "@niftgen/useStore": "workspace:*",
+    "react": "^18.2.0"
+  }
+}

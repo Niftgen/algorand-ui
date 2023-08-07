@@ -1,0 +1,5 @@
+mutation saveMetadata($metadata: AWSJSON, $walletAddress: String!) {
+  editUser(metadata: $metadata, walletAddress: $walletAddress) {
+    ...account
+  }
+}

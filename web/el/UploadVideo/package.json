@@ -1,0 +1,16 @@
+{
+  "name": "@niftgen/UploadVideo",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@mui/material": "^5.11.7",
+    "@niftgen/UploadImage": "workspace:*",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-collapse": "^5.1.1",
+    "react-dom": "^18.2.0"
+  }
+}

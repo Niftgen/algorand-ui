@@ -1,0 +1,5 @@
+mutation authenticate($walletAddress: String, $transaction: String) {
+  authenticate(transaction: $transaction, walletAddress: $walletAddress) {
+    data
+  }
+}

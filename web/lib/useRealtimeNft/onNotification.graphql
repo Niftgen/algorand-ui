@@ -1,0 +1,5 @@
+subscription onRealtimeNftNotification($assetId: Int!) {
+  onNotification(assetId: $assetId) {
+    ...notification
+  }
+}

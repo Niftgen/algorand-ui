@@ -1,0 +1,8 @@
+{
+  "name": "@niftgen/Hero",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT"
+}

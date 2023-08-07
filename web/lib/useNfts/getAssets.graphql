@@ -1,0 +1,23 @@
+query getAssets(
+  $categories: [Int]
+  $kind: [AssetKind]
+  $limit: Int
+  $offset: Int
+  $ownedByWalletAddress: String
+  $sort: AssetSortOrder
+  $status: [AssetStatus]
+  $walletAddress: String!
+) {
+  getAssets(
+    categories: $categories
+    kind: $kind
+    limit: $limit
+    offset: $offset
+    ownedByWalletAddress: $ownedByWalletAddress
+    sort: $sort
+    status: $status
+    walletAddress: $walletAddress
+  ) {
+    ...asset
+  }
+}

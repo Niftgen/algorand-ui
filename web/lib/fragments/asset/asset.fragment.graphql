@@ -1,0 +1,63 @@
+fragment asset on Asset {
+  id
+  assetId: asaId
+  name
+  description
+  kind
+  filePath
+  ipfsPath
+  cover
+  duration
+  views
+  metadata
+  createdAt
+  updatedAt
+  price
+  currency
+  saleType {
+    id
+    description
+  }
+  owner {
+    ...user
+  }
+  minter {
+    ...user
+  }
+  categories {
+    id
+    description
+  }
+
+  ratingTotals {
+    ratingCount
+    averageRating
+  }
+  myRating
+  totalComments
+
+  mint {
+    ...transaction
+  }
+  app {
+    ...transaction
+  }
+  optin {
+    ...transaction
+  }
+  list {
+    ...transaction
+  }
+  auction {
+    ...transaction
+  }
+  buy {
+    ...transaction
+  }
+  winningBid {
+    ...transaction
+  }
+  delist {
+    ...transaction
+  }
+}

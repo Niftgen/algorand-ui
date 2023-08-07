@@ -1,0 +1,5 @@
+query getNotifications($walletAddress: String!, $notificationType: NotificationType, $limit: Int, $offset: Int) {
+  getNotifications(walletAddress: $walletAddress, notificationType: $notificationType, limit: $limit, offset: $offset) {
+    ...notification
+  }
+}

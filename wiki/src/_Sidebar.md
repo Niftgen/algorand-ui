@@ -1,0 +1,15 @@
+## Support
+
+- [What is Niftgen](What-is-Niftgen)
+- [Why Should Video Creators Use Niftgen](Why-Should-Video-Creators-Use-Niftgen)
+- [What is Blockchain](What-is-Blockchain)
+- [Web 1.0 vs Web 2.0 vs Web 3.0](Web-1.0-vs-Web-2.0-vs-Web-3.0)
+- [What is an NFT?](What-is-an-NFT)
+- [What is a crypto wallet?](What-is-a-crypto-wallet)
+- [Buying Algos directly from Pera Wallet](Buying-Algos-directly-from-Pera-Wallet)
+- [Buying Algos directly from MyAlgo Wallet](Buying-Algos-directly-from-MyAlgo-Wallet)
+- [How to Create Accounts on Crypto Exchanges Coinbase & Kraken](Create-Accounts-on-Crypto-Exchanges-Coinbase-and-Kraken.md)
+- [Buying ALGO from Coinbase and Kraken](Buying-ALGO-from-Coinbase-and-Kraken)
+- [Transferring ALGO to your wallet](Transferring-ALGO-to-your-wallet)
+- [Wallet set up: MyAlgo Wallet](Wallet-set-up-MyAlgo-Wallet)
+- [Wallet set up: Pera Wallet](Wallet-set-up-Pera-Wallet)

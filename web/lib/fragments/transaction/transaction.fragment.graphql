@@ -1,0 +1,29 @@
+fragment transaction on Transaction {
+  id
+  type
+  txn: txIds
+  amount
+  currency
+  userId
+  buyerId
+  assetId
+  auctionId
+  sellType
+  owner {
+    ...user
+  }
+  buyer {
+    ...user
+  }
+  saleType {
+    id
+    description
+  }
+  royaltyFee
+  createdAt
+  updatedAt
+  appId
+  appAddress
+  startTime
+  endTime
+}

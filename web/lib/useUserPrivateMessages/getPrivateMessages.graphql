@@ -1,0 +1,19 @@
+query getPrivateMessages($walletAddress: String!, $limit: Int, $offset: Int) {
+  getPrivateMessages(walletAddress: $walletAddress, limit: $limit, offset: $offset) {
+    id
+    content
+    addressee {
+      id
+      walletAddress
+      avatarPath
+      userName
+    }
+    owner {
+      id
+      walletAddress
+      avatarPath
+      userName
+    }
+    createdAt
+  }
+}

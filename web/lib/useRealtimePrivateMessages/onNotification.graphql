@@ -1,0 +1,5 @@
+subscription onRealtimePrivateMessagesNotification($userId: Int!) {
+  onNotification(userId: $userId, notificationType: MESSAGE) {
+    ...notification
+  }
+}

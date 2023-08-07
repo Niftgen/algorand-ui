@@ -1,0 +1,22 @@
+{
+  "name": "@niftgen/useNfts",
+  "type": "module",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@niftgen/Nfts": "workspace:*",
+    "@niftgen/compileFragments": "workspace:*",
+    "@niftgen/currency": "workspace:*",
+    "@niftgen/fragments.asset": "workspace:*",
+    "@niftgen/fragments.transaction": "workspace:*",
+    "@niftgen/useAccount": "workspace:*",
+    "@niftgen/useAuth": "workspace:*",
+    "@niftgen/useFetch": "workspace:*",
+    "@tanstack/react-query": "^4.24.4",
+    "date-fns": "^2.29.3",
+    "react": "^18.2.0"
+  }
+}

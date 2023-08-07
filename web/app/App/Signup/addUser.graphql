@@ -1,0 +1,19 @@
+mutation addUser(
+  $email: String!
+  $userName: String!
+  $avatarPath: String
+  $walletAddress: String!
+  $interests: [Int]
+  $dateOfBirth: AWSDate!
+) {
+  addUser(
+    avatarPath: $avatarPath
+    email: $email
+    interests: $interests
+    userName: $userName
+    walletAddress: $walletAddress
+    dateOfBirth: $dateOfBirth
+  ) {
+    ...account
+  }
+}

@@ -1,0 +1,28 @@
+fragment notification on Notification {
+  id
+  assetId
+  userId
+  originatorId
+  deletedCommentId
+  notification
+  notificationType
+  createdAt
+  comment {
+    ...comment
+  }
+  asset {
+    ...asset
+  }
+  rating {
+    ...rating
+  }
+  transaction {
+    ...transaction
+  }
+  owner {
+    ...user
+  }
+  originator {
+    ...user
+  }
+}

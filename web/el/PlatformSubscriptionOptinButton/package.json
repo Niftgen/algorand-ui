@@ -1,0 +1,20 @@
+{
+  "name": "@niftgen/PlatformSubscriptionOptinButton",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@mui/material": "^5.11.7",
+    "@niftgen/AlgoLink": "workspace:*",
+    "@niftgen/StatusButton": "workspace:*",
+    "@niftgen/useAlgod": "workspace:*",
+    "@niftgen/useAuth": "workspace:*",
+    "@niftgen/useConfig": "workspace:*",
+    "algosdk": "^2.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

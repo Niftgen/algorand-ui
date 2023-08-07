@@ -1,0 +1,12 @@
+{
+  "name": "@niftgen/renderDate",
+  "type": "module",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^2.29.3"
+  }
+}

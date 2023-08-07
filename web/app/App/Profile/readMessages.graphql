@@ -1,0 +1,5 @@
+mutation readMessages($walletAddress: String!, $ids: [Int]!) {
+  messagesRead(walletAddress: $walletAddress, ids: $ids) {
+    id
+  }
+}

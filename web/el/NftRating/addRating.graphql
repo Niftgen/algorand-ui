@@ -1,0 +1,13 @@
+mutation addRating($assetId: Int!, $walletAddress: String!, $rating: Int) {
+  addRating(assetId: $assetId, rating: $rating, walletAddress: $walletAddress) {
+    rating
+    userId
+    asset {
+      myRating
+      ratingTotals {
+        averageRating
+        ratingCount
+      }
+    }
+  }
+}

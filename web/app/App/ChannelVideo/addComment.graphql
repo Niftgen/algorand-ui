@@ -1,0 +1,16 @@
+mutation addChannelVideoComment($walletAddress: String!, $assetId: Int!, $content: String!) {
+  addNftComment(walletAddress: $walletAddress, assetId: $assetId, content: $content) {
+    id
+    content
+    asset {
+      id
+    }
+    owner {
+      id
+      walletAddress
+      avatarPath
+      userName
+    }
+    createdAt
+  }
+}

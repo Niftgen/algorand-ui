@@ -1,0 +1,16 @@
+{
+  "name": "@niftgen/useGraphqlSubscription",
+  "type": "module",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-amplify/api": "5.0.12",
+    "@aws-amplify/api-graphql": "3.1.0",
+    "@aws-amplify/core": "5.0.12",
+    "@niftgen/useConfig": "workspace:*",
+    "react": "^18.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+fragment account on User {
+  id
+  userName
+  email
+  walletAddress
+  avatarPath
+  dateOfBirth
+  interests {
+    id
+  }
+  types {
+    id
+  }
+  bio
+  referralCode
+  twitterUrl
+  instagramUrl
+  discordUrl
+  facebookUrl
+  videoCreator
+  metadata
+  messageReceivedTotals {
+    nftMessageTotal
+    nftMessageRead
+    privateMessageTotal
+    privateMessageRead
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@niftgen/wiki",
+  "private": true,
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "./index.js"
+}

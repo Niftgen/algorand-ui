@@ -1,0 +1,16 @@
+query getNftComments($assetId: Int!, $limit: Int, $offset: Int) {
+  getNftComments(assetId: $assetId, limit: $limit, offset: $offset) {
+    id
+    content
+    asset {
+      id
+    }
+    owner {
+      id
+      walletAddress
+      avatarPath
+      userName
+    }
+    createdAt
+  }
+}

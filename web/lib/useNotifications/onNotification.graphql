@@ -1,0 +1,5 @@
+subscription onNotification($userId: Int!) {
+  onNotification(userId: $userId) {
+    ...notification
+  }
+}

@@ -1,0 +1,19 @@
+mutation addPrivateMessage($walletAddress: String!, $addresseeId: Int!, $content: String!) {
+  addPrivateMessage(walletAddress: $walletAddress, addresseeId: $addresseeId, content: $content) {
+    id
+    content
+    addressee {
+      id
+      walletAddress
+      avatarPath
+      userName
+    }
+    owner {
+      id
+      walletAddress
+      avatarPath
+      userName
+    }
+    createdAt
+  }
+}

@@ -1,0 +1,3 @@
+mutation deleteAsset($ownerAddress: String!, $id: Int!) {
+  deleteAsset(ownerAddress: $ownerAddress, id: $id)
+}

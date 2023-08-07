@@ -1,0 +1,8 @@
+query getAsset($id: Int!, $walletAddress: String!) {
+  getAsset(id: $id) {
+    ...asset
+  }
+  getAssetOptin(id: $id, walletAddress: $walletAddress) {
+    ...transaction
+  }
+}

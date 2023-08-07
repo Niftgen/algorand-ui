@@ -1,0 +1,31 @@
+mutation editUser(
+  $walletAddress: String!
+  $userName: String!
+  $avatarPath: String
+  $dateOfBirth: AWSDate
+  $interests: [Int]
+  $types: [Int]
+  $bio: String
+  $twitterUrl: String
+  $instagramUrl: String
+  $discordUrl: String
+  $facebookUrl: String
+  $metadata: AWSJSON
+) {
+  editUser(
+    avatarPath: $avatarPath
+    dateOfBirth: $dateOfBirth
+    interests: $interests
+    types: $types
+    userName: $userName
+    walletAddress: $walletAddress
+    bio: $bio
+    twitterUrl: $twitterUrl
+    instagramUrl: $instagramUrl
+    discordUrl: $discordUrl
+    facebookUrl: $facebookUrl
+    metadata: $metadata
+  ) {
+    ...account
+  }
+}

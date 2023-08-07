@@ -1,0 +1,27 @@
+mutation addAsset(
+  $categories: [Int]
+  $cover: String
+  $description: String
+  $duration: Int
+  $filePath: String
+  $ipfsPath: String
+  $kind: AssetKind
+  $metadata: AWSJSON
+  $name: String!
+  $ownerAddress: String!
+) {
+  addAsset(
+    categories: $categories
+    cover: $cover
+    description: $description
+    duration: $duration
+    filePath: $filePath
+    ipfsPath: $ipfsPath
+    kind: $kind
+    metadata: $metadata
+    name: $name
+    ownerAddress: $ownerAddress
+  ) {
+    ...asset
+  }
+}

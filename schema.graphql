@@ -1,0 +1,446 @@
+"""
+Tells the service this field/object has access authorized by an API key.
+"""
+directive @aws_api_key on FIELD_DEFINITION | OBJECT
+
+"""
+Directs the schema to enforce authorization on a field
+"""
+directive @aws_auth(
+  """
+  List of cognito user pool groups which have access on this field
+  """
+  cognito_groups: [String]
+) on FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by a Cognito User Pools token.
+"""
+directive @aws_cognito_user_pools(
+  """
+  List of cognito user pool groups which have access on this field
+  """
+  cognito_groups: [String]
+) on FIELD_DEFINITION | OBJECT
+
+"""
+Tells the service this field/object has access authorized by sigv4 signing.
+"""
+directive @aws_iam on FIELD_DEFINITION | OBJECT
+
+"""
+Tells the service this field/object has access authorized by a Lambda Authorizer.
+"""
+directive @aws_lambda on FIELD_DEFINITION | OBJECT
+
+"""
+Tells the service this field/object has access authorized by an OIDC token.
+"""
+directive @aws_oidc on FIELD_DEFINITION | OBJECT
+
+"""
+Tells the service which subscriptions will be published to when this mutation is called. This directive is deprecated use @aws_susbscribe directive instead.
+"""
+directive @aws_publish(
+  """
+  List of subscriptions which will be published to when this mutation is called.
+  """
+  subscriptions: [String]
+) on FIELD_DEFINITION
+
+"""
+Tells the service which mutation triggers this subscription.
+"""
+directive @aws_subscribe(
+  """
+  List of mutations which will trigger this subscription when they are called.
+  """
+  mutations: [String]
+) on FIELD_DEFINITION
+
+"""
+This directive allows results to be deferred during execution
+"""
+directive @defer on FIELD
+
+"""
+The `AWSDate` scalar type provided by AWS AppSync, represents a valid ***extended*** [ISO 8601 Date](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates) string. In other words, this scalar type accepts date strings of the form `YYYY-MM-DD`.  The scalar can also accept "negative years" of the form `-YYYY` which correspond to years before `0000`. For example, "**-2017-05-01**" and "**-9999-01-01**" are both valid dates.  This scalar type can also accept an optional [time zone offset](https://en.wikipedia.org/wiki/ISO_8601#Time_zone_designators). For example, "**1970-01-01**", "**1970-01-01Z**", "**1970-01-01-07:00**" and "**1970-01-01+05:30**" are all valid dates. The time zone offset must either be `Z` (representing the UTC time zone) or be in the format `±hh:mm:ss`. The seconds field in the timezone offset will be considered valid even though it is not part of the ISO 8601 standard.
+"""
+scalar AWSDate
+
+"""
+The `AWSDateTime` scalar type provided by AWS AppSync, represents a valid ***extended*** [ISO 8601 DateTime](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations) string. In other words, this scalar type accepts datetime strings of the form `YYYY-MM-DDThh:mm:ss.SSSZ`.  The scalar can also accept "negative years" of the form `-YYYY` which correspond to years before `0000`. For example, "**-2017-01-01T00:00Z**" and "**-9999-01-01T00:00Z**" are both valid datetime strings.  The field after the two digit seconds field is a nanoseconds field. It can accept between 1 and 9 digits. So, for example, "**1970-01-01T12:00:00.2Z**", "**1970-01-01T12:00:00.277Z**" and "**1970-01-01T12:00:00.123456789Z**" are all valid datetime strings.  The seconds and nanoseconds fields are optional (the seconds field must be specified if the nanoseconds field is to be used).  The [time zone offset](https://en.wikipedia.org/wiki/ISO_8601#Time_zone_designators) is compulsory for this scalar. The time zone offset must either be `Z` (representing the UTC time zone) or be in the format `±hh:mm:ss`. The seconds field in the timezone offset will be considered valid even though it is not part of the ISO 8601 standard.
+"""
+scalar AWSDateTime
+
+"""
+The `AWSEmail` scalar type provided by AWS AppSync, represents an Email address string that complies with [RFC 822](https://www.ietf.org/rfc/rfc822.txt). For example, "**username@example.com**" is a valid Email address.
+"""
+scalar AWSEmail
+
+"""
+The `AWSJSON` scalar type provided by AWS AppSync, represents a JSON string that complies with [RFC 8259](https://tools.ietf.org/html/rfc8259).  Maps like "**{\\"upvotes\\": 10}**", lists like "**[1,2,3]**", and scalar values like "**\\"AWSJSON example string\\"**", "**1**", and "**true**" are accepted as valid JSON and will automatically be parsed and loaded in the resolver mapping templates as Maps, Lists, or Scalar values rather than as the literal input strings.  Invalid JSON strings like "**{a: 1}**", "**{'a': 1}**" and "**Unquoted string**" will throw GraphQL validation errors.
+"""
+scalar AWSJSON
+
+"""
+The `AWSURL` scalar type provided by AWS AppSync, represents a valid URL string (Ex: <https://www.amazon.com/>). The URL may use any scheme and may also be a local URL (Ex: <http://localhost/>).  URLs without schemes like "**amazon.com**" or "**www.amazon.com**" are considered invalid. URLs which contain double slashes (two consecutive forward slashes) in their path are also considered invalid.
+"""
+scalar AWSURL
+
+type AsseTotals {
+  totalCount: Int
+}
+
+type Asset {
+  app: Transaction
+  appTransactionId: Int
+  asaId: Int
+  auction: Transaction
+  auctionTransactionId: Int
+  buy: Transaction
+  buyTransactionId: Int
+  buyTxId: String
+  categories: [Lookup]
+  cover: String
+  createdAt: AWSDateTime
+  currency: Currency
+  deListTransactionId: Int
+  deListTxId: String
+  delist: Transaction
+  description: String
+  duration: Int
+  filePath: String
+  id: Int!
+  ipfsPath: String
+  kind: AssetKind
+  list: Transaction
+  listTransactionId: Int
+  listingTxId: String
+  metadata: AWSJSON
+  mint: Transaction
+  mintTransactionId: Int
+  minter: User
+  minterId: Int
+  myRating: Int
+  name: String!
+  optin: Transaction
+  optinTransactionId: Int
+  owner: User
+  price: Int
+  ratingTotals: RatingTotals
+  saleType: Lookup
+  sellType: Int
+  totalComments: Int
+  txId: String
+  updatedAt: AWSDateTime
+  userId: Int!
+  views: Int
+  winBidTransactionId: Int
+  winningBid: Transaction
+}
+
+enum AssetKind {
+  AUDIO
+  FREE_VIDEO
+  NFT_AUDIO
+  NFT_IMAGE
+  NFT_VIDEO
+  SUBSCRIPTION
+  VIDEO
+}
+
+enum AssetSortOrder {
+  LATEST_ADDED
+  MOST_VIEWED
+  PRICE_HL
+  PRICE_LH
+  TOP_RATED
+}
+
+enum AssetStatus {
+  HIDDEN
+  LISTED
+  MINTED
+  SOLD
+  UNMINTED
+  VISIBLE
+}
+
+type Comment {
+  addressee: User
+  addresseeId: Int
+  asset: Asset
+  assetId: Int
+  content: String!
+  createdAt: AWSDateTime
+  id: Int!
+  messageRead: AWSDateTime
+  owner: User
+  updatedAt: AWSDateTime
+  userId: Int
+}
+
+enum Currency {
+  ALGO
+  NIFTGEN
+  USD
+}
+
+type Lookup {
+  active: Boolean!
+  createdAt: AWSDateTime
+  description: String!
+  id: Int!
+  type: String!
+  updatedAt: AWSDateTime
+}
+
+type MessageTotals {
+  nftMessageRead: Int
+  nftMessageTotal: Int
+  privateMessageRead: Int
+  privateMessageTotal: Int
+}
+
+type Mutation {
+  addAsset(
+    categories: [Int]
+    cover: String
+    description: String
+    duration: Int
+    filePath: String
+    ipfsPath: String
+    kind: AssetKind
+    metadata: AWSJSON
+    name: String!
+    ownerAddress: String!
+  ): Asset
+  addCreatorApp(unsignedTxn: AWSJSON!, walletAddress: String!): User
+  addLookup(description: String!, type: String!): Lookup
+  addNftComment(assetId: Int!, content: String!, walletAddress: String!): Comment
+  addNftMessage(addresseeId: Int!, assetId: Int!, content: String!, walletAddress: String!): Comment
+  addPrivateMessage(addresseeId: Int!, content: String!, walletAddress: String!): Comment
+  addRating(assetId: Int!, rating: Int, walletAddress: String!): Rating
+  addUser(
+    avatarPath: String
+    bio: String
+    dateOfBirth: AWSDate
+    discordUrl: String
+    email: String!
+    facebookUrl: String
+    instagramUrl: String
+    interests: [Int]
+    metadata: AWSJSON
+    twitterUrl: String
+    types: [Int]
+    userName: String!
+    videoCreator: Boolean
+    walletAddress: String!
+  ): User
+  authenticate(transaction: String, walletAddress: String): Response
+  bidOnAsset(amount: Int, buyerAddress: String!, id: Int!, signedTxn: AWSJSON!): Asset
+  buyAsset(buyerAddress: String!, id: Int!, signedTxn: AWSJSON!): Asset
+  createApp(id: Int!, ownerAddress: String!, royaltyFee: Int, signedTxn: AWSJSON!): Asset
+  createAuction(
+    currency: Currency!
+    endTime: AWSDateTime
+    id: Int!
+    ownerAddress: String!
+    reservePrice: Int
+    signedTxn: AWSJSON!
+    startTime: AWSDateTime
+  ): Asset
+  deleteAsset(id: Int, ownerAddress: String!): Int
+  deleteComment(id: Int, walletAddress: String!): Int
+  deleteLookup(id: Int!): Int
+  deleteNotification(id: Int!, walletAddress: String!): Int
+  deleteUser(walletAddress: String!): Int
+  delistAsset(id: Int!, ownerAddress: String!, signedTxn: AWSJSON!): Asset
+  editLookup(active: Boolean, description: String, id: Int!, type: String): Lookup
+  editUser(
+    avatarPath: String
+    bio: String
+    dateOfBirth: AWSDate
+    discordUrl: String
+    email: String
+    facebookUrl: String
+    instagramUrl: String
+    interests: [Int]
+    metadata: AWSJSON
+    twitterUrl: String
+    types: [Int]
+    userName: String
+    videoCreator: Boolean
+    walletAddress: String!
+  ): User
+  endAuction(id: Int!, signedTxn: AWSJSON!, walletAddress: String!): Asset
+  listAsset(currency: Currency!, id: Int!, ownerAddress: String!, price: Int, signedTxn: AWSJSON!): Asset
+  messageRead(id: Int!, walletAddress: String!): Comment
+  messagesRead(ids: [Int]!, walletAddress: String!): [Comment]
+  mintAsset(id: Int!, minterAddress: String!, signedTxn: AWSJSON!): Asset
+  optinApp(id: Int!, ownerAddress: String!, signedTxn: AWSJSON!): Asset
+  optinAsset(id: Int!, ownerAddress: String!, signedTxn: AWSJSON!): Transaction
+  startAuction(id: Int!, ownerAddress: String!, signedTxn: AWSJSON!): Asset
+  transak(data: String!): Boolean
+  triggerNotification(token: String!): Notification
+  updateAsset(id: Int!, kind: AssetKind, ownerAddress: String!): Asset
+  updateAssetIpfs: Int
+  viewedAsset(id: Int!, walletAddress: String!): Asset
+}
+
+type Notification {
+  asset: Asset
+  assetId: Int
+  comment: Comment
+  commentId: Int
+  createdAt: AWSDateTime
+  deletedCommentId: Int
+  id: Int!
+  notification: String!
+  notificationType: NotificationType!
+  originator: User
+  originatorId: Int
+  owner: User!
+  rating: Rating
+  ratingId: Int
+  transaction: Transaction
+  transactionId: Int
+  updatedAt: AWSDateTime
+  userId: Int
+}
+
+enum NotificationType {
+  BID
+  COMMENT
+  EXPIRED_SUBSCRIPTION
+  MESSAGE
+  PURCHASE
+  RATING
+  SALE
+  WON
+}
+
+type Query {
+  getAsset(id: Int): Asset
+  getAssetOptin(id: Int!, walletAddress: String!): Transaction
+  getAssets(
+    categories: [Int]
+    kind: [AssetKind]
+    limit: Int
+    offset: Int
+    onlyListed: Boolean
+    ownedByCurrentUser: Boolean
+    ownedByWalletAddress: String
+    sort: AssetSortOrder
+    status: [AssetStatus]
+    walletAddress: String!
+  ): [Asset]
+  getAssetsCount(
+    categories: [Int]
+    kind: [AssetKind]
+    limit: Int
+    offset: Int
+    onlyListed: Boolean
+    ownedByCurrentUser: Boolean
+    ownedByWalletAddress: String
+    sort: AssetSortOrder
+    status: [AssetStatus]
+    walletAddress: String!
+  ): AsseTotals
+  getCategories: [Lookup]
+  getLookups: [Lookup]
+  getLookupsForType(type: String!): [Lookup]
+  getNftComments(assetId: Int!, limit: Int, offset: Int): [Comment]
+  getNftMessages(assetId: [Int], limit: Int, offset: Int, walletAddress: String!): [Comment]
+  getNotifications(limit: Int, notificationType: NotificationType, offset: Int, walletAddress: String!): [Notification]
+  getPrivateMessages(limit: Int, offset: Int, walletAddress: String!): [Comment]
+  getSaleTypes: [Lookup]
+  getUser(referralCode: String, walletAddress: String): User
+  getUserTypes: [Lookup]
+  getUsers: [User]
+}
+
+type Rating {
+  asset: Asset
+  assetId: Int!
+  id: Int!
+  rating: Int
+  user: User
+  userId: Int!
+}
+
+type RatingTotals {
+  averageRating: Float
+  ratingCount: Int
+}
+
+type Response {
+  data: AWSJSON
+}
+
+type Subscription {
+  onAddNftComment: Comment
+  onAddNftCommentByAssetId(assetId: Int!): Comment
+  onAddPrivateMessageByWalletAddress(walletAddress: String!): Comment
+  onAddRating: Rating
+  onAddRatingByAssetId(assetId: Int): Rating
+  onBuyAsset: Asset
+  onDelistAsset: Asset
+  onListAsset: Asset
+  onNotification(assetId: Int, notificationType: NotificationType, originatorId: Int, userId: Int): Notification
+}
+
+type Transaction {
+  amount: Int
+  appAddress: String
+  appId: Int
+  asset: Asset
+  assetId: Int
+  auctionId: Int
+  bids: [Transaction]
+  buyer: User
+  buyerId: Int
+  createdAt: AWSDateTime
+  currency: Currency
+  endTime: AWSDateTime
+  id: Int!
+  owner: User
+  royaltyFee: Int
+  saleType: Lookup
+  sellType: Int
+  startTime: AWSDateTime
+  txIds: String
+  type: String
+  updatedAt: AWSDateTime
+  userId: Int
+}
+
+type User {
+  avatarPath: AWSURL
+  bio: String
+  createdAt: AWSDateTime
+  creatorApp: Transaction
+  creatorAppTransactionId: Int
+  creatorReferralCode: String
+  dateOfBirth: AWSDate
+  discordUrl: String
+  email: AWSEmail!
+  facebookUrl: String
+  id: Int!
+  instagramUrl: String
+  interests: [Lookup]
+  kyc: Boolean
+  kycDate: AWSDateTime
+  kycToken: AWSJSON
+  messageReceivedTotals: MessageTotals
+  metadata: AWSJSON
+  notifications: [Notification]
+  referralCode: String
+  twitterUrl: String
+  types: [Lookup]
+  updatedAt: AWSDateTime
+  userName: String!
+  videoCreator: Boolean
+  walletAddress: String!
+}

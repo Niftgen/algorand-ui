@@ -1,0 +1,89 @@
+:root {
+  --AppBar-background: #1b1928;
+
+  --background-color-main: #18171c;
+  --background-color-secondary: #1b1928;
+  --background-color-input: #18171c;
+  --background-color-input-hover: #474554;
+  --background-color-input-disabled: #474554;
+  --background-color-button-disabled: #36314f;
+  --font-color-primary: #beb9d4;
+  --font-color-secondary: #beb9d4;
+  --font-color-hint: #474554;
+  --font-color-disabled: #9592a6;
+  --font-color-bold: #faf8ff;
+  --input-border-color-primary: #514a77;
+  --input-border-color-disabled: #6c6980;
+  --font-color-button-disabled: #6d639e;
+  --font-color-form-label: #e9e8f1;
+
+  --font-color-footer-profile: #faf8ff;
+  --background-color-footer-profile: #36314f;
+
+  --border-color-outlined-button: #919dfa;
+  --font-color-outlined-button: #919dfa;
+
+  --background-color-button: #514a77;
+  --font-color-button: #faf8ff;
+
+  --background-color-header: #1b1928;
+  --border-color-header: transparent;
+  --font-color-header: #faf8ff;
+  --shadow-header: none;
+
+  --background-color-footer: #1b1928;
+  --border-color-footer: #36314f;
+  --font-color-footer: #faf8ff;
+
+  --fill-color-logo: #faf8ff;
+  --fill-color-logoText: #faf8ff;
+
+  --font-color-profile-name: #928bb7;
+  --border-color-profile-avatar: #928bb7;
+
+  --background-color-message-not-mine: #1b1928;
+  --background-color-message-mine: #514a77;
+
+  --font-color-nft-price: #1d2b2c;
+  --background-color-nft-price: #7aa4a7;
+}
+
+html {
+  background-color: var(--AppBar-background);
+}
+
+.MuiOutlinedInput-input {
+  -webkit-text-fill-color: var(--font-color-primary);
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: var(--input-border-color-primary);
+}
+
+.MuiOutlinedInput-input.Mui-disabled {
+  background-color: var(--background-color-input-disabled);
+  -webkit-text-fill-color: var(--font-color-disabled);
+}
+
+.MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+  border-color: var(--input-border-color-disabled);
+}
+
+.MuiTextField-root {
+  background: var(--background-color-input);
+}
+
+.gradient-text {
+  -webkit-transform: translate3d(0, 0, 0);
+
+  background: linear-gradient(45deg, #dadefd, #475ef6, #e865fd, #a8a2c5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-text-fill-color: transparent;
+  -webkit-backface-visibility: hidden;
+}
+
+.ReactCollapse--collapse {
+  transition: height 200ms;
+}

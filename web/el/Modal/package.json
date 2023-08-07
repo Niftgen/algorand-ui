@@ -1,0 +1,13 @@
+{
+  "name": "@niftgen/Modal",
+  "private": true,
+  "module": "index.js",
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.7",
+    "prop-types": "^15.8.1"
+  }
+}

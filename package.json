@@ -1,0 +1,21 @@
+{
+  "workspaces": [
+    "web/**/*",
+    "wiki"
+  ],
+  "name": "niftgen",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Niftgen <info@niftgen.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn workspaces foreach --verbose --parallel --interlaced run start",
+    "build": "yarn workspaces foreach --verbose --parallel --interlaced run build"
+  },
+  "resolutions": {
+    "date-fns": "2",
+    "react": "18",
+    "react-dom": "18"
+  },
+  "packageManager": "yarn@3.6.1"
+}

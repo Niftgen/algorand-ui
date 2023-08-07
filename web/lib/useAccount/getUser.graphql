@@ -1,0 +1,5 @@
+query getUser($walletAddress: String!) {
+  getUser(walletAddress: $walletAddress) {
+    ...account
+  }
+}
